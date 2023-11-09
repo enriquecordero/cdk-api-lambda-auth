@@ -1,14 +1,11 @@
-# Welcome to your CDK TypeScript project
+# Pequeno ejemplo de auth para apigeway usando una lambda
 
-This is a blank project for CDK development with TypeScript.
+Esto es lo que devuelve el evento
 
-The `cdk.json` file tells the CDK Toolkit how to execute your app.
-
-## Useful commands
-
-* `npm run build`   compile typescript to js
-* `npm run watch`   watch for changes and compile
-* `npm run test`    perform the jest unit tests
-* `cdk deploy`      deploy this stack to your default AWS account/region
-* `cdk diff`        compare deployed stack with current state
-* `cdk synth`       emits the synthesized CloudFormation template
+```
+{
+    "type": "TOKEN",
+    "methodArn": "arn:aws:execute-api:us-east-1:${account}:zprvh8dapj/prod/GET/call",
+    "authorizationToken": "abc"
+}
+```
