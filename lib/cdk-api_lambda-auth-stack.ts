@@ -26,6 +26,7 @@ export class CdkApiLambdaAuthStack extends cdk.Stack {
     const auth = new TokenAuthorizer(this, "NewRequestAuth", {
       handler: authFn,
       identitySource: "method.request.header.AuthorizeToken",
+     // resultsCacheTtl: cdk.Duration.hours(8),  PRD
     });
 
     // API
